@@ -1,3 +1,14 @@
+GIT
+  remote: git://github.com/plataformatec/devise.git
+  revision: b397d33246ae3dbc725f681a3f718a20d34313af
+  specs:
+    devise (4.0.0.rc2)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
+      warden (~> 1.2.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,6 +50,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.0.0)
+    bcrypt (3.1.11)
     builder (3.2.2)
     byebug (8.2.4)
     coffee-rails (4.1.1)
@@ -55,6 +67,8 @@ GEM
     ffi (1.9.10)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    haml (4.0.7)
+      tilt
     i18n (0.7.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -81,6 +95,7 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    orm_adapter (0.5.0)
     puma (3.4.0)
     rack (2.0.0.alpha)
       json
@@ -116,6 +131,8 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    responders (2.1.2)
+      railties (>= 4.2.0, < 5.1)
     sass (3.4.22)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -123,6 +140,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    simple_form (3.2.1)
+      actionpack (> 4, < 5.1)
+      activemodel (> 4, < 5.1)
     spring (1.7.0)
     spring-watcher-listen (2.0.0)
       listen (>= 2.7, < 4.0)
@@ -145,6 +165,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.6)
+      rack (>= 1.0)
     web-console (3.1.1)
       activemodel (>= 4.2)
       debug_inspector
@@ -159,12 +181,15 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
+  devise!
+  haml
   jbuilder (~> 2.0)
   jquery-rails
   listen (~> 3.0.5)
   puma
   rails (>= 5.0.0.beta3, < 5.1)
   sass-rails (~> 5.0)
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
