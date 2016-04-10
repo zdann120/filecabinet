@@ -17,6 +17,8 @@ Rails.application.configure do
     config.action_controller.perform_caching = true
 
     config.action_mailer.perform_caching = false
+    
+    config.action_mailer.default_url_options = { host: 'http://rails-5-0-171276.nitrousapp.com', port: 3000 }
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
