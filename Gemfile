@@ -7,6 +7,11 @@ gem 'rails', github: 'rails/rails', branch: 'master'
 gem 'sqlite3', group: :development
 # Use Puma as the app server
 gem 'puma'
+
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+# gem 'fog'
+gem "fog-aws"
+gem "mini_magick"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

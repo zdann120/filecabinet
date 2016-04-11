@@ -16,6 +16,15 @@ GIT
       voight_kampff (~> 0.2)
 
 GIT
+  remote: git://github.com/carrierwaveuploader/carrierwave.git
+  revision: f096244295549c9ba36c2b6b71832383b331b7b5
+  specs:
+    carrierwave (0.10.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
+
+GIT
   remote: git://github.com/norman/friendly_id.git
   revision: 8531cdce5737df541bc2dbf9c0fa3ee4824b6fc8
   specs:
@@ -114,14 +123,32 @@ GEM
     concurrent-ruby (1.0.1)
     debug_inspector (0.0.2)
     erubis (2.7.0)
+    excon (0.49.0)
     execjs (2.6.0)
     ffi (1.9.10)
+    fog-aws (0.9.2)
+      fog-core (~> 1.27)
+      fog-json (~> 1.0)
+      fog-xml (~> 0.1)
+      ipaddress (~> 0.8)
+    fog-core (1.37.0)
+      builder
+      excon (~> 0.45)
+      formatador (~> 0.2)
+    fog-json (1.0.2)
+      fog-core (~> 1.0)
+      multi_json (~> 1.10)
+    fog-xml (0.1.2)
+      fog-core
+      nokogiri (~> 1.5, >= 1.5.11)
+    formatador (0.2.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     haml (4.0.7)
       tilt
     httpclient (2.7.1)
     i18n (0.7.0)
+    ipaddress (0.8.3)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -141,6 +168,7 @@ GEM
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0221)
+    mini_magick (4.5.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
@@ -226,13 +254,16 @@ PLATFORMS
 DEPENDENCIES
   bullet
   byebug
+  carrierwave!
   coffee-rails (~> 4.1.0)
   devise!
+  fog-aws
   friendly_id!
   haml
   jbuilder (~> 2.0)
   jquery-rails
   listen (~> 3.0.5)
+  mini_magick
   paper_trail!
   pg
   puma

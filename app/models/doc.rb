@@ -4,4 +4,5 @@ class Doc < ApplicationRecord
   has_paper_trail
   belongs_to :user
   acts_as_punchable
+  mount_uploader :file, FileUploader
 end
