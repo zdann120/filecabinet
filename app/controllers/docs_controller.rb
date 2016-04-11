@@ -2,7 +2,7 @@ class DocsController < ApplicationController
   before_action :find_doc, only: [:show, :edit, :update, :destroy]
   before_filter :set_paper_trail_whodunnit
   def index
-    @docs = Doc.where(user_id: current_user)
+    @docs = Doc.where(user_id: current_user).order('created_at DESC')
   end
   
   def show

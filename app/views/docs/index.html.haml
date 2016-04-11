@@ -1,12 +1,20 @@
 .wrapper_with_padding
   #docs.clearfix
   - unless @docs.blank?
-    - @docs.each do |doc|
-      %a{ href: (url_for [doc]) }
-        .doc
-          %h2.title= doc.title
-          %p.date= time_ago_in_words doc.created_at
-          %p.content= truncate strip_tags(doc.content), length: 50
+    %table
+      %tr
+        %th Doc Title
+        %th Created
+        %th Preview
+      - @docs.each do |doc|
+        %tr
+          %td
+            %a{ href: (url_for [doc]) }
+              %h2.title= doc.title
+          %td
+            %p.date= time_ago_in_words doc.created_at
+          %td
+            %p.content= truncate strip_tags(doc.content), length: 50
   - else
     %h2 Create Doc!
     %p Start creating documents and organizing your life!
