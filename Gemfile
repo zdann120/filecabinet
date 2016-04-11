@@ -20,6 +20,7 @@ gem 'paper_trail', github: 'airblade/paper_trail'
 gem 'friendly_id', github: 'norman/friendly_id'
 
 gem "bullet", :group => "development"
+gem 'punching_bag', github: 'biola/punching_bag'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
