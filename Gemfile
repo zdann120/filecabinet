@@ -8,6 +8,8 @@ gem 'sqlite3', group: :development
 # Use Puma as the app server
 gem 'puma'
 
+gem 'ckeditor', github: 'galetahub/ckeditor'
+
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 # gem 'fog'
 gem "fog-aws"

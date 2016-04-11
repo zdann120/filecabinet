@@ -25,6 +25,14 @@ GIT
       mime-types (>= 1.16)
 
 GIT
+  remote: git://github.com/galetahub/ckeditor.git
+  revision: 123389ea325b1521a3ac68cc0b1bac627a12f34b
+  specs:
+    ckeditor (4.1.6)
+      cocaine
+      orm_adapter (~> 0.5.0)
+
+GIT
   remote: git://github.com/norman/friendly_id.git
   revision: 8531cdce5737df541bc2dbf9c0fa3ee4824b6fc8
   specs:
@@ -113,6 +121,10 @@ GEM
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.9.0)
     byebug (8.2.4)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -255,6 +267,7 @@ DEPENDENCIES
   bullet
   byebug
   carrierwave!
+  ckeditor!
   coffee-rails (~> 4.1.0)
   devise!
   fog-aws
