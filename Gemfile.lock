@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/airblade/paper_trail.git
+  revision: 7733894b0d13c2a2a172ff0a8a6b1509eb02011c
+  specs:
+    paper_trail (5.0.0.pre)
+      activerecord (>= 3.0, < 6.0)
+      activesupport (>= 3.0, < 6.0)
+      request_store (~> 1.1)
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: b397d33246ae3dbc725f681a3f718a20d34313af
   specs:
@@ -131,6 +140,7 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    request_store (1.3.1)
     responders (2.1.2)
       railties (>= 4.2.0, < 5.1)
     sass (3.4.22)
@@ -186,6 +196,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   listen (~> 3.0.5)
+  paper_trail!
   puma
   rails (>= 5.0.0.beta3, < 5.1)
   sass-rails (~> 5.0)
