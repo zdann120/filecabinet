@@ -50,6 +50,6 @@ class DocsController < ApplicationController
     end
   
     def doc_params
-      params.require(:doc).permit(:title, :content, :user_id)
+      params.require(:doc).permit(:title, :content, :user_id, :file)
     end
 end
