@@ -1,7 +1,7 @@
 !!!
 %html
 %head
-  %title FileCabinet | Your life's work!
+  %title ZN::DocShare | Easily share files and snippets!
   = csrf_meta_tags
   = action_cable_meta_tag
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
@@ -10,7 +10,7 @@
 %body
   %header
     .header_inner
-      = link_to "FileCabinet", root_path, id: 'logo'
+      = link_to "ZN::DocShare", root_path, id: 'logo'
       
       %nav
         - if user_signed_in?
