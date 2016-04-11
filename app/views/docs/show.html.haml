@@ -3,7 +3,7 @@
     %h1.title= @doc.title
     - if !@doc.file.blank?
       %p= link_to "View File", @doc.file.url, class: 'button'
-    %p= simple_format "<em>Authored by #{@doc.user.email} at #{@doc.created_at.strftime "%d %b %Y - %I:%M %p %:z"}</em>"
+    %p= simple_format "<em>Authored by #{@doc.user.email} on #{@doc.created_at.strftime "%d %b %Y at %I:%M %p %:z"}</em>"
     %p= simple_format @doc.content
     
     %hr
@@ -17,7 +17,7 @@
         = link_to "Trash Doc", doc_path(@doc), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button'
     - if current_user == @doc.user
 
-      %h1.title Version History
+      %h1.title Audit Trail
       %table
         %tr
           %th ID
@@ -31,5 +31,5 @@
             - else
               %td= link_to version.id, doc_version_path(@doc, version)
             %td= version.event
-            %td= version.created_at.strftime "%d %b %Y - %I:%M %p %:z"
+            %td= version.created_at.strftime "%d %b %Y at %I:%M %p %:z"
           
