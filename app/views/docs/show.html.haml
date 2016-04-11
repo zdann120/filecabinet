@@ -1,7 +1,7 @@
 .wrapper_with_padding
   #doc_show
     %h1.title= @doc.title
-    %p= simple_format "<em>Authored by #{@doc.user.email} at #{@doc.created_at.strftime "%d %b %Y - %I:%M %p"}</em>"
+    %p= simple_format "<em>Authored by #{@doc.user.email} at #{@doc.created_at.strftime "%d %b %Y - %I:%M %p %:z"}</em>"
     %p= simple_format @doc.content
     %hr
     %p= "Hit Count: #{@doc.hits}"
@@ -25,5 +25,5 @@
           %tr
             %td= version.id
             %td= version.event
-            %td= version.created_at.strftime "%d %b %Y - %I:%M %p"
+            %td= version.created_at.strftime "%d %b %Y - %I:%M %p %:z"
           
