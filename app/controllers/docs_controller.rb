@@ -6,6 +6,7 @@ class DocsController < ApplicationController
   end
   
   def show
+    @doc.punch(request)
   end
   
   def new
