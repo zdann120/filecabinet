@@ -4,8 +4,15 @@
     %p= simple_format @doc.content
     %hr
     %p= "Hit Count: #{@doc.hits}"
-  - if current_user == @doc.user
-    #doc_show
+  
+      
+    
+    .buttons
+      - if current_user == @doc.user
+        = link_to "Fix Doc", edit_doc_path(@doc), class: 'button'
+        = link_to "Trash Doc", doc_path(@doc), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button'
+    - if current_user == @doc.user
+
       %h1.title Version History
       %table
         %tr
@@ -18,10 +25,4 @@
             %td= version.id
             %td= version.event
             %td= version.created_at
-      
-    
-    .buttons
-      - if current_user == @doc.user
-        = link_to "Fix Doc", edit_doc_path(@doc), class: 'button'
-        = link_to "Trash Doc", doc_path(@doc), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button'
-      
+          
