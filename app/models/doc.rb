@@ -5,4 +5,6 @@ class Doc < ApplicationRecord
   belongs_to :user
   acts_as_punchable
   mount_uploader :file, FileUploader
+  
+  validates :title, presence: true
 end
