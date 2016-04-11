@@ -2,21 +2,22 @@
   #doc_show
     %h1.title= @doc.title
     %p= simple_format @doc.content
-    %p= "Hit Count: #{@doc.hits}"
     %hr
-  #doc_show
-    %h1.title Version History
-    %table
-      %tr
-        %th ID
-        %th Action
-        %th Timestamp
-
-      - @doc.versions.each do |version|
+    %p= "Hit Count: #{@doc.hits}"
+  - if current_user == @doc.user
+    #doc_show
+      %h1.title Version History
+      %table
         %tr
-          %td= version.id
-          %td= version.event
-          %td= version.created_at
+          %th ID
+          %th Action
+          %th Timestamp
+
+        - @doc.versions.each do |version|
+          %tr
+            %td= version.id
+            %td= version.event
+            %td= version.created_at
       
     
     .buttons
