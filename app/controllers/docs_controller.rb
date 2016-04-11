@@ -14,6 +14,7 @@ class DocsController < ApplicationController
   
   def create
     @doc = current_user.docs.build(doc_params)
+    @doc.uuid = SecureRandom.uuid
     
     if @doc.save
       redirect_to @doc
