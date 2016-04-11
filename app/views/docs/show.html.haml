@@ -10,14 +10,12 @@
         %th ID
         %th Action
         %th Timestamp
-        %th User
 
       - @doc.versions.each do |version|
         %tr
           %td= version.id
           %td= version.event
           %td= version.created_at
-          %td= User.find(version.whodunnit).email
       
     
     .buttons

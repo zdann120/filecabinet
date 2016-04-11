@@ -8,6 +8,13 @@ GIT
       request_store (~> 1.1)
 
 GIT
+  remote: git://github.com/norman/friendly_id.git
+  revision: 8531cdce5737df541bc2dbf9c0fa3ee4824b6fc8
+  specs:
+    friendly_id (5.2.0.beta.1)
+      activerecord (>= 4.0.0)
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: b397d33246ae3dbc725f681a3f718a20d34313af
   specs:
@@ -192,6 +199,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise!
+  friendly_id!
   haml
   jbuilder (~> 2.0)
   jquery-rails
