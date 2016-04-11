@@ -17,7 +17,11 @@
           = link_to "Sign Out", destroy_user_session_path, method: :delete
         - else
           = link_to "Log In", new_user_session_path
-  %p.notice= notice
-  %p.alert= alert
+  - if notice
+    %br
+    %p.notice= notice
+  - if alert
+    %br
+    %p.alert= alert
   
   = yield
