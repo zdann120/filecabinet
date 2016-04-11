@@ -25,6 +25,10 @@ class DocsController < ApplicationController
   end
   
   def edit
+    if current_user != @doc.user
+      flash.notice = "You can't do that!"
+      redirect_to @doc
+    end
   end
   
   def update
