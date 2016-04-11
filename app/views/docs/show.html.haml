@@ -3,6 +3,8 @@
     %h1.title= @doc.title
     %p= simple_format "<em>Authored by #{@doc.user.email} at #{@doc.created_at.strftime "%d %b %Y - %I:%M %p %:z"}</em>"
     %p= simple_format @doc.content
+    - if !@doc.file.blank?
+      %p= link_to "View File", @doc.file.url
     %hr
     %p= "Hit Count: #{@doc.hits}"
   
