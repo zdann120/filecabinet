@@ -1,0 +1,20 @@
+.wrapper_with_padding
+  %h1.title Version Details
+  %table
+    %tr
+      %th Version ID:
+      %td= @version.id
+    %tr
+      %th Version Date:
+      %td= @version.created_at
+    %tr
+      %th Doc Title:
+      %td= @version.reify.title
+    %tr
+      %th Doc Content:
+      %td= simple_format(@version.reify.content)
+    %tr
+      %th File:
+      %td= @version.reify.file.url
+  
+  %button= link_to "Return to Doc", @doc

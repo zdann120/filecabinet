@@ -26,7 +26,10 @@
 
         - @doc.versions.each do |version|
           %tr
-            %td= version.id
+            - if version.event == 'create'
+              %td= version.id
+            - else
+              %td= link_to version.id, doc_version_path(@doc, version)
             %td= version.event
             %td= version.created_at.strftime "%d %b %Y - %I:%M %p %:z"
           

@@ -44,6 +44,11 @@ class DocsController < ApplicationController
     redirect_to docs_url
   end
   
+  def version
+    @doc = Doc.friendly.find(params[:doc_id])
+    @version = @doc.versions.find(params[:version_id])
+  end
+  
   private
     def find_doc
       @doc = Doc.friendly.find(params[:id])

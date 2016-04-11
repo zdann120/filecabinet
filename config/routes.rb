@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
-  resources :docs
+  resources :docs do
+    get 'versions/:version_id' => 'docs#version', as: 'version'
+  end
   get 'welcome/index'
   authenticated :user do
     root 'docs#index', as: 'authenticated_root'
