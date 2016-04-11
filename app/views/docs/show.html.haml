@@ -1,6 +1,7 @@
 .wrapper_with_padding
   #doc_show
     %h1.title= @doc.title
+    %p= simple_format "<em>Authored by #{@doc.user.email} at #{@doc.created_at}</em>"
     %p= simple_format @doc.content
     %hr
     %p= "Hit Count: #{@doc.hits}"
