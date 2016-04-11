@@ -86,4 +86,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   config.time_zone = 'America/Phoenix'
+  
+  config.action_mailer.default_url_options = { host: 'http://filecabinet.zachapps.com', port: 3000 }
 end
